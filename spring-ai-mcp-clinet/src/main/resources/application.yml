@@ -1,0 +1,29 @@
+spring:
+  application:
+    name: ai-mcp-clinet
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 10MB
+  ai:
+    mcp:
+      client:
+        enabled: true
+        name: spring-ai-mcp-server-sse
+        version: 1.0.0
+        request-timeout: 30s
+        initialized: true
+        type: ASYNC
+        sse:
+          connections:
+            dnaaa-server:
+              url: http://localhost:8020
+
+
+logging:
+  level:
+    org.springframework.ai: DEBUG
+    com.qjc: DEBUG
+    org.springframework.web: INFO
+
+
